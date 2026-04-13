@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyril Anto — ML Engineer & AI Systems</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Cyril Anto Justin Leo Rex Antoine — ML Engineer & AI Systems</title>
+  <link rel="stylesheet" href="styles.css?v=3" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div id="cursorGlow" class="cursor-glow"></div>
 
-  <!-- ===================== NAV ===================== -->
+  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">CA</a>
@@ -23,17 +24,17 @@
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <button class="nav-burger" id="navBurger">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-    <div class="nav-mobile" id="navMobile">
+    <div class="nav-drawer" id="navDrawer">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
@@ -43,178 +44,137 @@
     </div>
   </nav>
 
-  <!-- ===================== HERO ===================== -->
+  <!-- HERO -->
   <section id="hero" class="hero">
-    <div class="hero-aura aura-1"></div>
-    <div class="hero-aura aura-2"></div>
-    <div class="hero-aura aura-3"></div>
+    <div class="hero-blob b1"></div>
+    <div class="hero-blob b2"></div>
+    <div class="hero-blob b3"></div>
     <div class="hero-content">
-      <div class="hero-status fade-up" style="--d:0s">
-        <span class="status-dot"></span>
-        Open to work
+      <div class="hero-eyebrow reveal-hero" style="--i:0">
+        <span class="live-dot"></span> Open to work
       </div>
-      <h1 class="hero-name fade-up" style="--d:0.08s">Cyril Anto</h1>
-      <p class="hero-role fade-up" style="--d:0.16s">
-        ML Engineer &amp; <span class="hero-typed" id="typingText"></span><span class="hero-cursor">|</span>
+      <h1 class="hero-name" style="--i:1">Cyril Anto Justin Leo Rex Antoine</h1>
+      <p class="hero-role reveal-hero" style="--i:2">
+        ML Engineer &amp; <span class="typed-text" id="typingText"></span><span class="typed-cursor">|</span>
       </p>
-      <p class="hero-summary fade-up" style="--d:0.24s">
+      <p class="hero-tagline reveal-hero" style="--i:3">
         Building AI systems that generate insights and act on them.<br/>
         RAG pipelines · Agentic workflows · Production ML at scale.
       </p>
-      <div class="hero-socials fade-up" style="--d:0.32s">
-        <a href="mailto:justincyrilanto@gmail.com" class="social-btn" aria-label="Email">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          Email
-        </a>
-        <a href="https://linkedin.com/in/reachcyrilanto" target="_blank" class="social-btn" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/Cyrilanto16" target="_blank" class="social-btn" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          GitHub
-        </a>
+      <div class="hero-cta-row reveal-hero" style="--i:4">
+        <a href="mailto:justincyrilanto@gmail.com" class="cta-primary">Get in touch</a>
+        <a href="#projects" class="cta-ghost">View projects</a>
       </div>
     </div>
-    <a href="#about" class="hero-scroll-btn" aria-label="Scroll down">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    <a href="#about" class="scroll-arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </a>
   </section>
 
-  <!-- ===================== ABOUT ===================== -->
+  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
-      <div class="section-label">About</div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <h2>I build AI systems that <span class="text-accent">act</span>, not just predict.</h2>
-          <p>ML Engineer at the intersection of AI engineering and business analytics, focused on building systems that don't just surface insights — they act on them. Experienced in deploying deep learning models and Transformer architectures into production, optimising ML pipelines, and building agentic AI systems.</p>
-          <p>My focus is on systems that are <strong>reliable, explainable, and built to last</strong> — from RAG pipelines grounded in retrieved content, to end-to-end automation that replaces manual workflows.</p>
-          <div class="about-contact">
-            <a href="mailto:justincyrilanto@gmail.com">justincyrilanto@gmail.com</a>
-            <span class="dot-sep">·</span>
-            <a href="https://linkedin.com/in/reachcyrilanto" target="_blank">linkedin.com/in/reachcyrilanto</a>
+      <div class="about-layout">
+        <div class="about-headline reveal">
+          <p class="section-eyebrow">About</p>
+          <h2>Building AI that <em>acts</em>,<br/>not just predicts.</h2>
+          <p class="about-bio">ML Engineer at the intersection of AI engineering and business analytics. Experienced in deploying deep learning models and Transformer architectures into production, building agentic AI systems, and designing end-to-end pipelines that are reliable, explainable, and built to last.</p>
+          <div class="about-contact-row">
+            <a href="mailto:justincyrilanto@gmail.com" class="text-link">justincyrilanto@gmail.com</a>
+            <span>·</span>
+            <a href="https://linkedin.com/in/reachcyrilanto" target="_blank" class="text-link">LinkedIn</a>
+            <span>·</span>
+            <a href="https://github.com/Cyrilanto16" target="_blank" class="text-link">GitHub</a>
           </div>
         </div>
-        <div class="about-stats reveal" style="--d:0.1s">
-          <div class="stat-item">
-            <div class="stat-num">2+</div>
-            <div class="stat-lbl">Years of experience</div>
+        <div class="stats-grid reveal" style="--d:0.15s">
+          <div class="stat-block">
+            <span class="stat-n" data-count="2">2</span><span class="stat-n">+</span>
+            <span class="stat-l">Years of experience</span>
           </div>
-          <div class="stat-item">
-            <div class="stat-num">5+</div>
-            <div class="stat-lbl">AI/ML projects shipped</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">96%</div>
-            <div class="stat-lbl">Predictive model accuracy</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">15+</div>
-            <div class="stat-lbl">Certifications earned</div>
+          <div class="stat-block">
+            <span class="stat-n" data-count="5">5</span><span class="stat-n">+</span>
+            <span class="stat-l">AI/ML projects shipped</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== EXPERIENCE ===================== -->
+  <!-- EXPERIENCE -->
   <section id="experience" class="section section-alt">
     <div class="container">
-      <div class="section-label">Experience</div>
-      <h2 class="section-title reveal">Where I've Worked</h2>
-      <div class="timeline">
+      <p class="section-eyebrow reveal">Experience</p>
+      <h2 class="section-h2 reveal" style="--d:0.05s">Where I've Worked</h2>
+      <div class="exp-list">
 
-        <!-- MulticoreWare SE -->
-        <div class="tl-item reveal">
-          <div class="tl-logo-col">
-            <div class="tl-logo-wrap">
-              <img src="https://logo.clearbit.com/multicorewareinc.com" alt="MulticoreWare" class="tl-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-              <div class="tl-logo-fb" style="display:none">MCW</div>
+        <div class="exp-card reveal">
+          <div class="exp-top">
+            <div class="exp-logo-box">
+              <img src="https://logo.clearbit.com/multicorewareinc.com" alt="MulticoreWare" class="exp-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="exp-logo-text" style="display:none">MCW</div>
             </div>
-            <div class="tl-line"></div>
+            <div class="exp-meta">
+              <h3>Software Engineer — AI Systems &amp; Analytics</h3>
+              <p class="exp-company">MulticoreWare Inc. <span>Chennai, India</span></p>
+            </div>
+            <span class="exp-tenure">Jul 2023 – Mar 2024</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-header">
-              <div>
-                <h3 class="tl-role">Software Engineer — AI Systems &amp; Analytics</h3>
-                <p class="tl-company">MulticoreWare Inc. &nbsp;·&nbsp; Chennai, India</p>
-              </div>
-              <span class="tl-date">Jul 2023 – Mar 2024</span>
-            </div>
-            <ul class="tl-bullets">
-              <li>Deployed and benchmarked deep learning models (YOLO, ResNet, Transformers) across AI inference pipelines; translated model performance data into actionable optimisation insights for product teams.</li>
-              <li>Optimised model compilation workflows across <strong>TVM and the Buda compiler stack</strong> — debugging integration failures, resolving graph compilation issues, and streamlining validation across hardware targets.</li>
-              <li>Developed Python-based automation pipelines for ML model validation and analytics reporting, improving visibility into performance metrics and supporting data-driven product decisions.</li>
-              <li>Validated cross-framework compatibility by converting <strong>PyTorch models to ONNX</strong>, resolving serialisation and operator edge cases impacting deployment stability.</li>
-              <li>Built automated unit testing and validation suites within <strong>CI/CD pipelines</strong>, supporting scalable AI product delivery.</li>
-            </ul>
-            <div class="tl-tags">
-              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" title="Python"><span>Python</span>
-              <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" title="PyTorch"><span>PyTorch</span>
-              <img src="https://cdn.simpleicons.org/onnx/717272" alt="ONNX" title="ONNX"><span>ONNX</span>
-              <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" title="Docker"><span>Docker</span>
-              <img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins" title="Jenkins"><span>Jenkins</span>
-            </div>
+          <ul class="exp-bullets">
+            <li>Deployed and benchmarked deep learning models (YOLO, ResNet, Transformers) across AI inference pipelines, translating performance data into actionable optimisation insights.</li>
+            <li>Optimised model compilation across <strong>TVM and the Buda compiler stack</strong> — debugging integration failures, resolving graph compilation issues, streamlining hardware validation.</li>
+            <li>Converted <strong>PyTorch models to ONNX</strong>, resolving serialisation and operator edge cases to stabilise deployment across hardware targets.</li>
+            <li>Built automated unit testing and validation suites within <strong>CI/CD pipelines</strong>, supporting scalable and reliable AI product delivery.</li>
+          </ul>
+          <div class="exp-tags">
+            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python"><span>Python</span>
+            <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch"><span>PyTorch</span>
+            <img src="https://cdn.simpleicons.org/onnx/717272" alt="ONNX"><span>ONNX</span>
+            <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker"><span>Docker</span>
+            <img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins"><span>Jenkins</span>
           </div>
         </div>
 
-        <!-- MulticoreWare Junior -->
-        <div class="tl-item reveal" style="--d:0.1s">
-          <div class="tl-logo-col">
-            <div class="tl-logo-wrap">
-              <img src="https://logo.clearbit.com/multicorewareinc.com" alt="MulticoreWare" class="tl-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-              <div class="tl-logo-fb" style="display:none">MCW</div>
+        <div class="exp-card reveal" style="--d:0.08s">
+          <div class="exp-top">
+            <div class="exp-logo-box">
+              <img src="https://logo.clearbit.com/multicorewareinc.com" alt="MulticoreWare" class="exp-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="exp-logo-text" style="display:none">MCW</div>
             </div>
-            <div class="tl-line"></div>
+            <div class="exp-meta">
+              <h3>Junior Engineer</h3>
+              <p class="exp-company">MulticoreWare Inc. <span>Chennai, India</span></p>
+            </div>
+            <span class="exp-tenure">Jan 2023 – Jul 2023</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-header">
-              <div>
-                <h3 class="tl-role">Junior Engineer</h3>
-                <p class="tl-company">MulticoreWare Inc. &nbsp;·&nbsp; Chennai, India</p>
-              </div>
-              <span class="tl-date">Jan 2023 – Jul 2023</span>
-            </div>
-            <ul class="tl-bullets">
-              <li>Implemented and optimised IPC mechanisms (POSIX pipes, signals, polling) to improve responsiveness in multi-process Linux environments.</li>
-              <li>Profiled runtime behaviour, identified contention bottlenecks, and reduced IPC latency across service boundaries.</li>
-              <li>Designed and executed comprehensive test plans for IPC modules with root-cause analysis on high-priority defects.</li>
-            </ul>
-            <div class="tl-tags">
-              <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" title="Linux"><span>Linux</span>
-              <span class="tl-tag-text">C</span>
-              <span class="tl-tag-text">IPC</span>
-              <span class="tl-tag-text">Multi-threading</span>
-            </div>
+          <ul class="exp-bullets">
+            <li>Implemented and optimised IPC mechanisms (POSIX pipes, signals, polling) to improve multi-process responsiveness on Linux.</li>
+            <li>Profiled runtime behaviour, identified contention bottlenecks, and reduced IPC latency across service boundaries.</li>
+          </ul>
+          <div class="exp-tags">
+            <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux"><span>Linux</span>
+            <span class="tag-plain">C</span><span class="tag-plain">IPC</span><span class="tag-plain">Multi-threading</span>
           </div>
         </div>
 
-        <!-- Sundaram Clayton -->
-        <div class="tl-item reveal" style="--d:0.2s">
-          <div class="tl-logo-col">
-            <div class="tl-logo-wrap">
-              <img src="https://logo.clearbit.com/sundaramclayton.com" alt="Sundaram Clayton" class="tl-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
-              <div class="tl-logo-fb" style="display:none">SCL</div>
+        <div class="exp-card reveal" style="--d:0.16s">
+          <div class="exp-top">
+            <div class="exp-logo-box">
+              <img src="https://logo.clearbit.com/sundaramclayton.com" alt="Sundaram Clayton" class="exp-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="exp-logo-text" style="display:none">SCL</div>
             </div>
+            <div class="exp-meta">
+              <h3>Internship Trainee</h3>
+              <p class="exp-company">Sundaram Clayton Limited <span>Chennai, India</span></p>
+            </div>
+            <span class="exp-tenure">Aug – Sep 2022</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-header">
-              <div>
-                <h3 class="tl-role">Internship Trainee</h3>
-                <p class="tl-company">Sundaram Clayton Limited &nbsp;·&nbsp; Chennai, India</p>
-              </div>
-              <span class="tl-date">Aug 2022 – Sep 2022</span>
-            </div>
-            <ul class="tl-bullets">
-              <li>Performed real-time troubleshooting and root-cause analysis to minimise operational downtime on the manufacturing floor.</li>
-              <li>Documented recurring issues and structured troubleshooting checklists to streamline incident diagnosis and handover across shifts.</li>
-            </ul>
-            <div class="tl-tags">
-              <span class="tl-tag-text">Systems Analysis</span>
-              <span class="tl-tag-text">Root Cause Analysis</span>
-              <span class="tl-tag-text">Documentation</span>
-            </div>
+          <ul class="exp-bullets">
+            <li>Real-time troubleshooting and root-cause analysis to minimise operational downtime on the manufacturing floor.</li>
+            <li>Structured troubleshooting checklists to streamline incident diagnosis and handover across shifts.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag-plain">Root Cause Analysis</span><span class="tag-plain">Systems Analysis</span>
           </div>
         </div>
 
@@ -222,83 +182,74 @@
     </div>
   </section>
 
-  <!-- ===================== PROJECTS ===================== -->
+  <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="container">
-      <div class="section-label">Projects</div>
-      <h2 class="section-title reveal">Selected Work</h2>
-      <div class="projects-grid">
+      <p class="section-eyebrow reveal">Projects</p>
+      <h2 class="section-h2 reveal" style="--d:0.05s">Selected Work</h2>
+      <div class="bento-grid reveal" style="--d:0.1s">
 
-        <!-- Featured: RAG -->
-        <div class="proj-card proj-featured reveal">
-          <div class="proj-card-top">
-            <span class="proj-pill proj-pill-accent">Featured</span>
-          </div>
-          <h3>RAG-Based Product Catalogue Assistant</h3>
-          <p class="proj-type">Agentic AI Pipeline</p>
-          <p class="proj-desc">Designed and built a two-stage RAG pipeline for an enterprise knowledge assistant — ingestion, chunking, embedding, vector storage, and semantic retrieval. The AI agent generates grounded, contextually accurate answers without hallucination.</p>
-          <ul class="proj-highlights">
-            <li>Two-stage pipeline: ingestion + semantic retrieval</li>
-            <li>Vector database with embedding-based search</li>
-            <li>Grounded response generation — zero hallucination</li>
-          </ul>
-          <div class="proj-logos">
-            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" title="Python">
-            <img src="https://cdn.simpleicons.org/openai/10a37f" alt="OpenAI" title="OpenAI API">
-            <img src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="LangChain" title="LangChain" onerror="this.style.display='none'">
+        <!-- Featured — spans 2 rows -->
+        <div class="bento-feat">
+          <div class="bento-feat-bg"></div>
+          <div class="bento-feat-glyph">RAG</div>
+          <div class="bento-feat-body">
+            <span class="proj-tag-pill">Featured</span>
+            <h3>RAG-Based Product Catalogue Assistant</h3>
+            <p>Two-stage RAG pipeline — ingestion, chunking, vector storage, semantic retrieval. Zero hallucination by design.</p>
+            <ul class="proj-facts">
+              <li>Embedding-based semantic search</li>
+              <li>Grounded answers — no hallucination</li>
+            </ul>
+            <div class="proj-tech-row">
+              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" onerror="this.style.display='none'">
+              <img src="https://cdn.simpleicons.org/openai/10a37f" alt="OpenAI" onerror="this.style.display='none'">
+            </div>
           </div>
         </div>
 
-        <!-- Server Monitoring -->
-        <div class="proj-card reveal" style="--d:0.08s">
-          <h3>AI-Driven Server Incident Monitoring</h3>
-          <p class="proj-type">Automation Pipeline</p>
-          <p class="proj-desc">Python monitoring pipeline using AWS CloudWatch, REST APIs, and n8n workflows to collect logs and generate AI-powered incident summaries via OpenAI API — accelerating root-cause analysis.</p>
-          <div class="proj-logos">
-            <img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS" title="AWS CloudWatch">
-            <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" title="n8n" onerror="this.style.display='none'">
-            <img src="https://cdn.simpleicons.org/openai/10a37f" alt="OpenAI" title="OpenAI API">
-            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" title="Python">
+        <!-- Tile 1 -->
+        <div class="bento-tile" style="--gc:linear-gradient(135deg,#130800,#080404)">
+          <span class="tile-label">AWS · n8n</span>
+          <h4>AI-Driven Server Incident Monitoring</h4>
+          <p>Python pipeline using AWS CloudWatch and n8n to auto-generate AI incident summaries, accelerating root-cause analysis.</p>
+          <div class="proj-tech-row">
+            <img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS" onerror="this.style.display='none'">
+            <img src="https://cdn.simpleicons.org/openai/10a37f" alt="OpenAI" onerror="this.style.display='none'">
+            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" onerror="this.style.display='none'">
           </div>
         </div>
 
-        <!-- Storm Analysis -->
-        <div class="proj-card reveal" style="--d:0.12s">
-          <div class="proj-card-top">
-            <span class="proj-metric">96% accuracy</span>
-          </div>
-          <h3>Storm Analysis in Ireland</h3>
-          <p class="proj-type">Predictive ML &amp; Impact Assessment</p>
-          <p class="proj-desc">Hybrid ML framework using LSTM for weather forecasting and XGBoost for severity classification. Processed 60,000+ ERA5 data points with advanced feature engineering. Built geospatial county-level vulnerability heatmaps.</p>
-          <div class="proj-logos">
-            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" title="Python">
-            <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" title="TensorFlow">
-            <img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="scikit-learn" title="scikit-learn" onerror="this.style.display='none'">
+        <!-- Tile 2 -->
+        <div class="bento-tile" style="--gc:linear-gradient(135deg,#001525,#040810)">
+          <span class="tile-label tile-stat-badge">96% accuracy</span>
+          <h4>Storm Analysis in Ireland</h4>
+          <p>LSTM + XGBoost on 60,000+ ERA5 meteorological data points with geospatial county-level vulnerability heatmaps.</p>
+          <div class="proj-tech-row">
+            <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" onerror="this.style.display='none'">
+            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" onerror="this.style.display='none'">
           </div>
         </div>
 
-        <!-- RNN NIDS -->
-        <div class="proj-card reveal" style="--d:0.16s">
-          <h3>Network Intrusion Detection</h3>
-          <p class="proj-type">Cybersecurity · Deep Learning</p>
-          <p class="proj-desc">Deep learning NIDS using RNNs to detect cyber attacks and anomalous network behaviour. Preprocessing and anomaly pattern extraction pipeline on public cybersecurity datasets.</p>
-          <div class="proj-logos">
-            <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" title="PyTorch">
-            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" title="Python">
+        <!-- Tile 3 -->
+        <div class="bento-tile" style="--gc:linear-gradient(135deg,#150010,#080408)">
+          <span class="tile-label">Deep Learning</span>
+          <h4>Network Intrusion Detection</h4>
+          <p>RNN-based NIDS detecting cyber attacks on public cybersecurity datasets with custom preprocessing pipeline.</p>
+          <div class="proj-tech-row">
+            <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" onerror="this.style.display='none'">
+            <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" onerror="this.style.display='none'">
           </div>
         </div>
 
-        <!-- PyTorch OSS -->
-        <div class="proj-card reveal" style="--d:0.2s">
-          <div class="proj-card-top">
-            <span class="proj-pill proj-pill-orange">Open Source</span>
-          </div>
-          <h3>PyTorch Contributions</h3>
-          <p class="proj-type">Official GitHub Repository</p>
-          <p class="proj-desc">Contributed bug fixes and enhancements to the PyTorch codebase. Resolved edge-case failures in core framework components, participated in code reviews, and engaged in community issue discussions.</p>
-          <div class="proj-logos">
-            <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" title="PyTorch">
-            <img src="https://cdn.simpleicons.org/github/aaaaaa" alt="GitHub" title="GitHub">
+        <!-- Tile 4 -->
+        <div class="bento-tile" style="--gc:linear-gradient(135deg,#0d1000,#060804)">
+          <span class="tile-label open-badge">Open Source</span>
+          <h4>PyTorch Contributions</h4>
+          <p>Bug fixes and enhancements to the official PyTorch repo. Resolved edge-case failures in core components.</p>
+          <div class="proj-tech-row">
+            <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" onerror="this.style.display='none'">
+            <img src="https://cdn.simpleicons.org/github/aaaaaa" alt="GitHub" onerror="this.style.display='none'">
           </div>
         </div>
 
@@ -306,273 +257,167 @@
     </div>
   </section>
 
-  <!-- ===================== SKILLS ===================== -->
+  <!-- SKILLS -->
   <section id="skills" class="section section-alt">
     <div class="container">
-      <div class="section-label">Skills</div>
-      <h2 class="section-title reveal">Technical Stack</h2>
+      <p class="section-eyebrow reveal">Skills</p>
+      <h2 class="section-h2 reveal" style="--d:0.05s">Technical Stack</h2>
+    </div>
 
-      <div class="skills-categories">
-
-        <div class="skill-cat reveal">
-          <h3 class="skill-cat-title">Languages</h3>
-          <div class="skill-logos">
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python">
-              <span>Python</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/openjdk/437291" alt="Java">
-              <span>Java</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="SQL">
-              <span>SQL</span>
-            </div>
-            <div class="skill-logo-item skill-text-only">
-              <div class="skill-letter">C</div>
-              <span>C</span>
-            </div>
-          </div>
+    <!-- Marquee row 1 -->
+    <div class="marquee-wrap reveal" style="--d:0.1s">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true"><span>Python</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" aria-hidden="true"><span>PyTorch</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="" aria-hidden="true"><span>TensorFlow</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/onnx/717272" alt="" aria-hidden="true"><span>ONNX</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/openai/10a37f" alt="" aria-hidden="true"><span>OpenAI API</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="" aria-hidden="true"><span>FastAPI</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" aria-hidden="true"><span>Docker</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" aria-hidden="true"><span>AWS</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="" aria-hidden="true"><span>Azure</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/git/F05032" alt="" aria-hidden="true"><span>Git</span></div>
+          <!-- duplicate for seamless loop -->
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/python/3776AB" alt=""><span>Python</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt=""><span>PyTorch</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt=""><span>TensorFlow</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/onnx/717272" alt=""><span>ONNX</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/openai/10a37f" alt=""><span>OpenAI API</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/fastapi/009688" alt=""><span>FastAPI</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/docker/2496ED" alt=""><span>Docker</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt=""><span>AWS</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt=""><span>Azure</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/git/F05032" alt=""><span>Git</span></div>
         </div>
+      </div>
+    </div>
 
-        <div class="skill-cat reveal" style="--d:0.05s">
-          <h3 class="skill-cat-title">ML &amp; Deep Learning</h3>
-          <div class="skill-logos">
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch">
-              <span>PyTorch</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow">
-              <span>TensorFlow</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/onnx/717272" alt="ONNX">
-              <span>ONNX</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="scikit-learn" onerror="this.parentElement.style.display='none'">
-              <span>scikit-learn</span>
-            </div>
-          </div>
+    <!-- Marquee row 2 (reverse) -->
+    <div class="marquee-wrap marquee-reverse reveal" style="--d:0.15s">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" aria-hidden="true"><span>PostgreSQL</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" aria-hidden="true"><span>MySQL</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="" aria-hidden="true"><span>Databricks</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/jenkins/D24939" alt="" aria-hidden="true"><span>Jenkins</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/linux/FCC624" alt="" aria-hidden="true"><span>Linux</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/jira/0052CC" alt="" aria-hidden="true"><span>Jira</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/github/aaaaaa" alt="" aria-hidden="true"><span>GitHub</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/openjdk/437291" alt="" aria-hidden="true"><span>Java</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="" aria-hidden="true"><span>scikit-learn</span></div>
+          <div class="mq-item"><img src="https://cdn.simpleicons.org/microsoftpowerbi/F2C811" alt="" aria-hidden="true" onerror="this.src='https://cdn.simpleicons.org/powerbi/F2C811'"><span>Power BI</span></div>
+          <!-- duplicate -->
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt=""><span>PostgreSQL</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt=""><span>MySQL</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt=""><span>Databricks</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/jenkins/D24939" alt=""><span>Jenkins</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/linux/FCC624" alt=""><span>Linux</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/jira/0052CC" alt=""><span>Jira</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/github/aaaaaa" alt=""><span>GitHub</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/openjdk/437291" alt=""><span>Java</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt=""><span>scikit-learn</span></div>
+          <div class="mq-item" aria-hidden="true"><img src="https://cdn.simpleicons.org/microsoftpowerbi/F2C811" alt="" onerror="this.src='https://cdn.simpleicons.org/powerbi/F2C811'"><span>Power BI</span></div>
         </div>
+      </div>
+    </div>
 
-        <div class="skill-cat reveal" style="--d:0.1s">
-          <h3 class="skill-cat-title">GenAI &amp; Agentic</h3>
-          <div class="skill-logos">
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/openai/10a37f" alt="OpenAI">
-              <span>OpenAI API</span>
-            </div>
-            <div class="skill-logo-item skill-text-only">
-              <div class="skill-letter">LC</div>
-              <span>LangChain</span>
-            </div>
-            <div class="skill-logo-item skill-text-only">
-              <div class="skill-letter">RAG</div>
-              <span>RAG</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-cat reveal" style="--d:0.15s">
-          <h3 class="skill-cat-title">Data &amp; Analytics</h3>
-          <div class="skill-logos">
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/microsoftpowerbi/F2C811" alt="Power BI" onerror="this.src='https://cdn.simpleicons.org/powerbi/F2C811'">
-              <span>Power BI</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks">
-              <span>Databricks</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Azure ML">
-              <span>Azure ML</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-cat reveal" style="--d:0.2s">
-          <h3 class="skill-cat-title">Backend &amp; APIs</h3>
-          <div class="skill-logos">
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI">
-              <span>FastAPI</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL">
-              <span>PostgreSQL</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL">
-              <span>MySQL</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-cat reveal" style="--d:0.25s">
-          <h3 class="skill-cat-title">DevOps &amp; Cloud</h3>
-          <div class="skill-logos">
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS">
-              <span>AWS</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Azure">
-              <span>Azure</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker">
-              <span>Docker</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/git/F05032" alt="Git">
-              <span>Git</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins">
-              <span>Jenkins</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-cat reveal" style="--d:0.3s">
-          <h3 class="skill-cat-title">Automation &amp; Tools</h3>
-          <div class="skill-logos">
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" onerror="this.parentElement.classList.add('skill-text-only'); this.style.display='none'">
-              <span>n8n</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira">
-              <span>Jira</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux">
-              <span>Linux</span>
-            </div>
-            <div class="skill-logo-item">
-              <img src="https://cdn.simpleicons.org/github/aaaaaa" alt="GitHub">
-              <span>GitHub</span>
-            </div>
-          </div>
-        </div>
-
+    <!-- Skills grid -->
+    <div class="container">
+      <div class="skills-grid reveal" style="--d:0.2s">
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" onerror="this.style.display='none'">Python</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" onerror="this.style.display='none'">PyTorch</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" onerror="this.style.display='none'">TensorFlow</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/onnx/717272" alt="ONNX" onerror="this.style.display='none'">ONNX</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/openai/10a37f" alt="OpenAI" onerror="this.style.display='none'">OpenAI API</div>
+        <div class="skill-pill no-img">LLMs</div>
+        <div class="skill-pill no-img">RAG Pipelines</div>
+        <div class="skill-pill no-img">LangChain</div>
+        <div class="skill-pill no-img">Agentic AI</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" onerror="this.style.display='none'">FastAPI</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" onerror="this.style.display='none'">PostgreSQL</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" onerror="this.style.display='none'">MySQL</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS" onerror="this.style.display='none'">AWS</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Azure" onerror="this.style.display='none'">Azure</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" onerror="this.style.display='none'">Docker</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" onerror="this.style.display='none'">Git</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins" onerror="this.style.display='none'">Jenkins</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" onerror="this.style.display='none'">Databricks</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/microsoftpowerbi/F2C811" alt="Power BI" onerror="this.src='https://cdn.simpleicons.org/powerbi/F2C811'; this.onerror=null">Power BI</div>
+        <div class="skill-pill no-img">LSTM · XGBoost</div>
+        <div class="skill-pill no-img">Prompt Engineering</div>
+        <div class="skill-pill"><img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" onerror="this.style.display='none'">Linux</div>
+        <div class="skill-pill no-img">CI/CD</div>
+        <div class="skill-pill no-img">Agile / Scrum</div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== EDUCATION ===================== -->
+  <!-- EDUCATION -->
   <section id="education" class="section">
     <div class="container">
-      <div class="section-label">Education</div>
-      <h2 class="section-title reveal">Academic Background</h2>
-      <div class="edu-grid">
+      <p class="section-eyebrow reveal">Education</p>
+      <h2 class="section-h2 reveal" style="--d:0.05s">Academic Background</h2>
+      <div class="edu-duo">
 
-        <div class="edu-card reveal">
-          <div class="edu-card-top">
-            <div class="edu-logo-wrap">
-              <img src="https://logo.clearbit.com/universityofgalway.ie" alt="University of Galway" class="edu-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="edu-logo-fb" style="display:none">UG</div>
+        <div class="edu-block reveal">
+          <div class="edu-block-top">
+            <div class="edu-uni-logo">
+              <img src="https://logo.clearbit.com/universityofgalway.ie" alt="University of Galway" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="edu-uni-initials" style="display:none">UG</div>
             </div>
-            <div class="edu-grade-badge">2:1</div>
           </div>
           <h3>MSc Business Analytics</h3>
-          <p class="edu-school">University of Galway &nbsp;·&nbsp; Ireland</p>
-          <p class="edu-dates">Sep 2024 – Nov 2025</p>
-          <p class="edu-honour">Upper Second-Class Honours</p>
-          <div class="edu-courses">
-            Data Science &amp; Big Data Analytics · Decision Theory AI &amp; Analytics · Statistical Techniques · Database Systems · Business Modelling · Advanced Programming for Analytics
-          </div>
+          <p class="edu-where">University of Galway · Ireland</p>
+          <p class="edu-when">Sep 2024 – Nov 2025</p>
+          <p class="edu-modules">Data Science &amp; Big Data Analytics · Decision Theory AI &amp; Analytics · Statistical Techniques · Database Systems · Business Modelling · Advanced Programming for Analytics</p>
         </div>
 
-        <div class="edu-card reveal" style="--d:0.12s">
-          <div class="edu-card-top">
-            <div class="edu-logo-wrap">
-              <img src="https://logo.clearbit.com/sairam.edu.in" alt="Sri Sairam Engineering College" class="edu-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="edu-logo-fb" style="display:none">SSE</div>
+        <div class="edu-block reveal" style="--d:0.1s">
+          <div class="edu-block-top">
+            <div class="edu-uni-logo">
+              <img src="https://logo.clearbit.com/sairam.edu.in" alt="Sri Sairam Engineering College" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="edu-uni-initials" style="display:none">SSE</div>
             </div>
-            <div class="edu-grade-badge">8.72</div>
           </div>
           <h3>BE Computer Science &amp; Engineering</h3>
-          <p class="edu-school">Sri Sairam Engineering College &nbsp;·&nbsp; India</p>
-          <p class="edu-dates">Aug 2019 – Jul 2023</p>
-          <p class="edu-honour">First Class with Honours (1:1)</p>
-          <div class="edu-courses">
-            Artificial Intelligence · Data Structures · Object-Oriented Programming · Database Management Systems · Operating Systems · Design and Analysis of Algorithms
-          </div>
+          <p class="edu-where">Sri Sairam Engineering College · India</p>
+          <p class="edu-when">Aug 2019 – Jul 2023</p>
+          <p class="edu-modules">Artificial Intelligence · Data Structures · OOP · Database Management Systems · Operating Systems · Design and Analysis of Algorithms</p>
         </div>
 
       </div>
 
-      <!-- Certifications -->
-      <div class="certs-section reveal" style="--d:0.15s">
-        <h3 class="certs-title">Certifications</h3>
-        <div class="certs-grid">
-          <div class="cert-row">
-            <img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS">
-            <span>AWS Certified Cloud Practitioner</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch">
-            <span>Deep Learning with PyTorch: Generative Adversarial Networks</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Azure">
-            <span>Machine Learning Pipelines with Azure ML Studio</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow">
-            <span>Transfer Learning for NLP with TensorFlow Hub</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google">
-            <span>AI-Powered Performance Ads Certification — Google Skillshop</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://logo.clearbit.com/ucsd.edu" alt="UC San Diego" onerror="this.style.display='none'">
-            <span>Introduction to Big Data — UC San Diego</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira">
-            <span>Automate Tasks and Processes with Jira</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://logo.clearbit.com/london.ac.uk" alt="University of London" onerror="this.style.display='none'">
-            <span>Machine Learning for All — University of London</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://logo.clearbit.com/ea.com" alt="Electronic Arts" onerror="this.style.display='none'">
-            <span>Electronic Arts — Product Management Job Simulation</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://logo.clearbit.com/tata.com" alt="Tata Group" onerror="this.style.display='none'">
-            <span>Tata Group — Data Visualisation Job Simulation</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://logo.clearbit.com/accenture.com" alt="Accenture" onerror="this.style.display='none'">
-            <span>Accenture Nordics — Consultant Job Simulation</span>
-          </div>
-          <div class="cert-row">
-            <img src="https://logo.clearbit.com/coursera.org" alt="Coursera" onerror="this.style.display='none'">
-            <span>Business Analysis &amp; Process Management</span>
-          </div>
+      <!-- Certs -->
+      <div class="certs-block reveal" style="--d:0.15s">
+        <h3 class="certs-label">Certifications</h3>
+        <div class="certs-flex">
+          <div class="cert-chip"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="" onerror="this.style.display='none'">AWS Certified Cloud Practitioner</div>
+          <div class="cert-chip"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="" onerror="this.style.display='none'">Deep Learning with PyTorch: GANs</div>
+          <div class="cert-chip"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="" onerror="this.style.display='none'">ML Pipelines with Azure ML Studio</div>
+          <div class="cert-chip"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="" onerror="this.style.display='none'">Transfer Learning for NLP — TensorFlow</div>
+          <div class="cert-chip"><img src="https://cdn.simpleicons.org/google/4285F4" alt="" onerror="this.style.display='none'">AI-Powered Ads — Google Skillshop</div>
+          <div class="cert-chip"><img src="https://cdn.simpleicons.org/jira/0052CC" alt="" onerror="this.style.display='none'">Automate with Jira</div>
+          <div class="cert-chip no-img">Intro to Big Data — UC San Diego</div>
+          <div class="cert-chip no-img">Machine Learning for All — Univ. of London</div>
+          <div class="cert-chip"><img src="https://logo.clearbit.com/ea.com" alt="" onerror="this.style.display='none'">EA Product Management Simulation</div>
+          <div class="cert-chip"><img src="https://logo.clearbit.com/tata.com" alt="" onerror="this.style.display='none'">Tata Data Visualisation Simulation</div>
+          <div class="cert-chip"><img src="https://logo.clearbit.com/accenture.com" alt="" onerror="this.style.display='none'">Accenture Nordics Consultant Simulation</div>
+          <div class="cert-chip no-img">Business Analysis &amp; Process Management</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="section section-alt">
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt contact-section">
     <div class="container">
       <div class="contact-center reveal">
-        <div class="section-label">Contact</div>
-        <h2>Let's build something.</h2>
-        <p class="contact-desc">Open to ML Engineering, AI Systems, and Data/Analytics roles. My inbox is always open.</p>
-        <a href="mailto:justincyrilanto@gmail.com" class="contact-cta">Say Hello</a>
-        <div class="contact-links">
+        <p class="section-eyebrow">Contact</p>
+        <h2 class="contact-big">Let's build<br/><em>something great.</em></h2>
+        <p class="contact-sub">Open to ML Engineering, AI Systems, and Data Analytics roles.<br/>My inbox is always open.</p>
+        <a href="mailto:justincyrilanto@gmail.com" class="contact-main-btn">Say Hello</a>
+        <div class="contact-social-row">
           <a href="https://linkedin.com/in/reachcyrilanto" target="_blank">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             LinkedIn
@@ -591,9 +436,12 @@
   </section>
 
   <footer class="footer">
-    <p>Designed &amp; built by <strong>Cyril Anto</strong> &nbsp;·&nbsp; 2025</p>
+    <div class="container">
+      <span>Designed &amp; built by <strong>Cyril Anto Justin Leo Rex Antoine</strong></span>
+      <span>2025</span>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
